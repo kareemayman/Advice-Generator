@@ -6,11 +6,30 @@
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 800;
   font-style: normal;
   background-color: hsl(218, 23%, 16%);
   min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  background-color: hsl(217, 19%, 24%);
+}
+
+.container > h1 {
+  color: hsl(150, 100%, 66%);
+}
+
+.container q {
+  color: hsl(193, 38%, 86%);
+}
+
+.container .dice {
+  background-color: hsl(150, 100%, 66%);
+}
+
+.container .dice:hover {
+  box-shadow: 0 0 10px 1px hsl(150, 100%, 66%);
 }
