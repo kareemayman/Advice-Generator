@@ -18,6 +18,11 @@ body {
   background-color: hsl(217, 19%, 24%);
 }
 
+::selection {
+  background-color: hsl(150, 100%, 66%);
+  color: black
+}
+
 .container > h1 {
   color: hsl(150, 100%, 66%);
 }
