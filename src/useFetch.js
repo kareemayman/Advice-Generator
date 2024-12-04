@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export function useFetch(url) {
+export function useFetch(url, triggerFetch) {
   const [isLoading, changeIsLoading] = useState(true)
   const [isError, changeIsError] = useState(false)
   const [data, setData] = useState([])
@@ -13,17 +13,16 @@ export function useFetch(url) {
       })
       .then((jsonData) => setData(jsonData))
       .catch(() => {
-        changeIsError(false)
-        console.error(Error)
+        changeIsError(true)
       })
       .finally(() => changeIsLoading(false))
 
     return () => {
-      changeIsError(true)
+      changeIsLoading(true)
       changeIsError(false)
       setData([])
     }
-  }, [url])
+  }, [url, triggerFetch])
 
   return { isLoading, isError, data }
 }
