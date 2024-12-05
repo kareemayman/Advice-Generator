@@ -24,7 +24,7 @@ export function Advice() {
 
   console.log(data)
   return (
-    <div className="container rounded-2xl relative p-11 text-center mx-3 max-w-80 sm:max-w-lg">
+    <div className="container rounded-2xl relative p-11 text-center mx-3 max-w-80 sm:max-w-lg shadow-2xl">
       <h1 className="font-medium tracking-[.2em] text-sm">
         {isLoading ? "" : isError ? "" : `ADVICE #${data.slip.id}`}
       </h1>
